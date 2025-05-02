@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="player">
+    <h1>Music Player Created by Mansih kumar</h1>
+    <audio id="audio" preload="metadata"></audio>
+
+    <div class="controls">
+      <button onclick="prevSong()">⏮️</button>
+      <button onclick="togglePlay()">▶️/⏸️</button>
+      <button onclick="nextSong()">⏭️</button>
+    </div>
+
+    <div class="volume">
+      Volume: <input type="range" id="volumeSlider" min="0" max="1" step="0.01">
+    </div>
+
+    <div class="progress-container">
+      <span id="currentTime">0:00</span>
+      <input type="range" id="progress" value="0" max="100">
+      <span id="duration">0:00</span>
+    </div>
+
+    <ul id="playlist"></ul>
+    <h5>how did you feel using it <h5>
+     
+    <div style="text-align: center; margin-top: 30px;">
+      <button onclick="showFeedback()">📝 Give Feedback</button>
+    </div>
+
+    <div id="feedback" style="display: none; margin-top: 20px; text-align: center;">
+      <h3>Give Your Feedback 🎧</h3>
+        <div class="feedback-buttons">
+          <button onclick="sendFeedback('Very Good')">✅ Very Good</button>
+          <button onclick="sendFeedback('Good')">👍 Good</button>
+          <button onclick="sendFeedback('Not Good')">👎 Not Good</button>
+          <button onclick="closeFeedback()">❌ Close</button>
+        </div>
+      <p id="feedbackMessage" style="margin-top: 10px; font-weight: bold;"></p>
+    </div>
+
+      
+
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
